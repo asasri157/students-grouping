@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grouping</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/x-icon"> <!-- Tambahkan favicon -->
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Student Grouping Logo" class="logo">
+        </div>
+        <nav>
+            <div class="burger" id="burger">
+                &#9776;
+            </div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#grouping">Grouping</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to Student Grouping</h1>
+            <p>A simple tool to group students by name and gender.</p>
+            <button onclick="startGrouping()">Start Now</button>
+        </section>
+
+        <section id="register">
+            <h2>Register Students</h2>
+            <form id="registrationForm">
+                <label for="names">Names (enter multiple names separated by commas):</label>
+                <textarea id="names" name="names" rows="5" required></textarea>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <h3>Registered Students</h3>
+            <div id="studentList">
+                <h4>Males</h4>
+                <ul id="maleList"></ul>
+                <h4>Females</h4>
+                <ul id="femaleList"></ul>
+            </div>
+        </section>
+
+        <section id="grouping">
+            <h2>Group Students</h2>
+            <button onclick="groupByGender()">Group by Gender</button>
+            <button onclick="groupRandomly()">Group Randomly</button>
+            <h3>Custom Grouping</h3>
+            <form id="customGroupForm">
+                <label for="numGroups">Number of Groups:</label>
+                <input type="number" id="numGroups" name="numGroups" min="2" required>
+                <button type="submit">Create Groups</button>
+            </form>
+        </section>
+
+        <section id="results">
+            <h2>Grouped Students</h2>
+            <div id="groupResults"></div>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+            <p>Additional settings for grouping (if needed).</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>For technical support, please contact us at support@example.com.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
